@@ -67,7 +67,13 @@ public class App {
 				}
 				break;
 			case 5:
-				x.selectCity(cityList).createBuyer();
+				try {
+					x.selectCity(cityList).createBuyer();
+				} catch (IndexOutOfBoundsException e) {
+					e.printStackTrace();
+				} catch (NoSuchElementException e) {
+					e.printStackTrace();
+				}
 				break;
 			case 6:
 				x.selectBuyer(x.selectCity(cityList)).buyItem(x.selectSeller(x.selectCity(cityList)));

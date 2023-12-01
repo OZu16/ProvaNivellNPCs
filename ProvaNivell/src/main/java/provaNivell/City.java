@@ -97,7 +97,7 @@ public class City {
 	}
 	
 	
-	public void createBuyer() {
+	public void createBuyer() throws NoSuchElementException {
 
 		String nameBuyer;
 		double coins;

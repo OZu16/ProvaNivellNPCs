@@ -81,20 +81,25 @@ public class Buyer {
 			purchasedItems.add(itemSelected);
 			seller.setCoins(seller.getCoins() + itemSelected.getPrice() + ((((Merchant) seller).getTAX() / 100.0) * itemSelected.getPrice()));
 			setCoins(this.coins - itemSelected.getPrice());
+			System.out.println(itemSelected.getName() + " comprado a mercader: " + seller.getName() + "!\n");
 			seller.getInventory().remove(itemSelected);
-			System.out.println("item comprado a mercader: " + seller.getName());
+			
 
 		}else if(seller instanceof Peasant) {
 			purchasedItems.add(itemSelected);
 			seller.setCoins(seller.getCoins() + itemSelected.getPrice() + ((((Peasant) seller).getTAX() / 100.0) * itemSelected.getPrice()));
 			setCoins(this.coins - itemSelected.getPrice());
+			System.out.println(itemSelected.getName() + " comprado a campesino: " + seller.getName() + "!\n");
 			seller.getInventory().remove(itemSelected);
+			
 
 		}else {
 			purchasedItems.add(itemSelected);
 			seller.setCoins(seller.getCoins() + itemSelected.getPrice());
 			setCoins(this.coins - itemSelected.getPrice());
+			System.out.println(itemSelected.getName() + " comprado a ladrón: " + seller.getName() + "!\n");
 			seller.getInventory().remove(itemSelected);
+			
 
 		}
 		

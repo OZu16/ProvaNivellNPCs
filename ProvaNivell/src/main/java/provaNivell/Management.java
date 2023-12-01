@@ -94,7 +94,7 @@ public class Management {
 	public void insertBuyers (List<City> cityList) {
 
 		cityList.get(0).getBuyerList().add(new Buyer("Raul", "Lumbridge", 8052.32));
-		cityList.get(1).getBuyerList().add(new Buyer("Gerard", "Varrock", 1.12));
+		cityList.get(1).getBuyerList().add(new Buyer("Gerard", "Varrock", 111.12));
 	}
 	
 	public void insertItemsOnSellers (List<City> cityList, List<Item> itemList) {
