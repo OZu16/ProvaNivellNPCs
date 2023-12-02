@@ -76,7 +76,8 @@ public class App {
 				}
 				break;
 			case 6:
-				x.selectBuyer(x.selectCity(cityList)).buyItem(x.selectSeller(x.selectCity(cityList)));
+				City cs = x.selectCity(cityList);
+				x.selectBuyer(cs).buyItem(x.selectSeller(cs));
 				break;
 			case 7:
 				x.selectBuyer(x.selectCity(cityList)).showInventory();
@@ -90,8 +91,9 @@ public class App {
 			case 10:
 				x.itemByTypeList(itemList);
 				break;
+			case 0:
+				System.out.println("app Cerrada!");
 			default:
-				break;
 			};
 			
 		}while(indexMenu != 0);

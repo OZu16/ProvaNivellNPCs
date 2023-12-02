@@ -67,6 +67,7 @@ public class Buyer {
 		
 		int useItem;
 		
+		System.out.println("Introduce el id del item que deseas comprar.");
 		seller.showInventory();
 		
 		useItem = sc.nextInt();
